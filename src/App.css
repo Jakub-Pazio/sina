@@ -1,0 +1,101 @@
+#root {
+  width: auto;
+  max-height: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+footer {
+  margin-top: 2rem;
+}
+
+.task-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+  height: 100%;
+  flex-wrap: wrap;
+}
+
+.task-column {
+  flex: 1;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-column h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.task {
+  background-color: #fff;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative; /* Added relative position for the task container */
+}
+
+.task p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.task-buttons {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.task input[type="text"] {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Position the close button in the top-right corner */
+.close-button {
+  position: absolute; /* Absolute positioning within the task */
+  top: 10px; /* Distance from the top */
+  right: 10px; /* Distance from the right */
+  color: red;
+  font-size: 20px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  z-index: 10; /* Ensures it stays above other content */
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+  .task-columns {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .task-column {
+    width: 100%;
+  }
+}
